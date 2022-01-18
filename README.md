@@ -1,2 +1,2 @@
 # tinking-in-jcip
-Reading And Thinking of "Java Concurrency In Practice".
+Thinking And Reading Comprehension of "Java Concurrency In Practice".
