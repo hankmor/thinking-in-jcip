@@ -27,6 +27,10 @@ public class UnsynchronizedArrayList {
 
 	//~ Methods
 
+	/*
+	 * 本示例展示 ArrayList 不是线程安全的。
+	 */
+
 	public static void main(String[] args) throws InterruptedException {
 		int size = 10;
 		UnsynchronizedArrayList unsynchronizedArrayList = new UnsynchronizedArrayList();

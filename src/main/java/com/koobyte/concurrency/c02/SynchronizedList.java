@@ -28,6 +28,10 @@ public class SynchronizedList {
 
 	//~ Methods
 
+	/*
+	 * 展示线程安全的操作List的示例。
+	 */
+
 	public static void main(String[] args) throws InterruptedException {
 		int size = 100;
 		SynchronizedList main = new SynchronizedList();
@@ -36,7 +40,7 @@ public class SynchronizedList {
 		executorService.execute(() -> main.each(synchronizedList));
 		// 另一个线程删除
 		executorService.execute(() -> main.remove(synchronizedList));
-		// 再来一个线程清空list
+		// 再来一个线程清空list，这里没有加锁也能保证线程安全
 		executorService.execute(synchronizedList::clear);
 		System.out.println(synchronizedList.size());
 		executorService.shutdown();
