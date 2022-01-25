@@ -1,5 +1,7 @@
 package com.koobyte.concurrency.c02;
 
+import net.jcip.annotations.NotThreadSafe;
+
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -12,6 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author sunfuchang03@126.com
  * @since 1.0
  */
+@NotThreadSafe
 public class UnsafeAtomicCompositeOperation {
 	//~ Static fields/constants/initializer
 
@@ -35,7 +38,7 @@ public class UnsafeAtomicCompositeOperation {
 	 * 2、lastResult 和 lastId 的set操作不能保证原子性
 	 */
 
-	public synchronized Integer generate(Integer orderId) {
+	public Integer generate(Integer orderId) {
 		// 最后结果对应则直接返回
 		if (orderId.equals(lastId.get())) {
 			System.out.println("Existed : " + orderId);
