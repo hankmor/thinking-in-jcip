@@ -93,7 +93,7 @@ public class VolatileDemo {
 
 	public static void unsafeCounterTest() {
 		UnsafeCounter unsafeCounter = new UnsafeCounter();
-		// 10个线程，每个线程技术1000此，期望的结果是10000
+		// 10个线程，每个线程计算1000次，期望的结果是10000
 		for (int i = 0; i < 10; i++) {
 			new Thread(() -> {
 				for (int j = 0; j < 1000; j++) {
