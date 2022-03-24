@@ -40,7 +40,7 @@ public class ReorderingDemo {
 			t2.start();
 			t1.join();
 			t2.join();
-			String result = "第" + i + "次(" + x + "," + y + ")";
+			String result = "i = " + i + ", x = " + x + ", y = " + y;
 			if (x == 0 && y == 0) {
 				System.out.println(result);
 				break;
