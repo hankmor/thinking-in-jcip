@@ -37,6 +37,7 @@ public class CounterSync {
 
 	// read未同步，会读取到失效的数据
 	public int read() {
+	// public synchronized int read() {
 		return this.count;
 	}
 
