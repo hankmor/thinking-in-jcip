@@ -66,7 +66,7 @@ public class VolatileDemo {
 		// unsafeCounterTest();
 
 		// 解决原子性的一种方案：使用重量级锁保证原子性，如synchronized或者Lock
-		// safeCounterTest();
+		safeCounterTest();
 
 		// 有volatile，也无法保证原子性
 		// unsafeCounterTest2();
@@ -75,7 +75,7 @@ public class VolatileDemo {
 		// visibilityTest();
 
 		// 解决原子性的更优方案：使用JUC下的AtomicXXX类
-		safeCounterTest2();
+		// safeCounterTest2();
 	}
 
 	public static void viewAllThread() {
